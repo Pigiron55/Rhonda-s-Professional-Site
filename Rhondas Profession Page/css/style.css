@@ -14,7 +14,7 @@
     --fw-bold: 900;
     
     --clr-light: #FEFFFE;
-    --clr-dark: #8D818C;
+    --clr-dark: #344055;
     --clr-accent: #E9EBF8;
     
     --fs-h1: 3rem;
@@ -424,37 +424,49 @@ header {
 
 .my-work {
     background-color: var(--clr-dark);
-    color: var(--clr-light);
+    color: var(--clr-dark);
     text-align: center;    
 }
 
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2em;
+    place-items: center;
 }
 
-.portfolio__item {
+.card {
+    background: var(--clr-light);
+    padding: 2em;
+    margin-bottom: 2em;
+    max-height: 300px
+       
+}
+
+.container {
     background: var(--clr-accent);
-    overflow: hidden;
-    max-height: 200px
-}
-
-.portfolio__img {
+    border-left: 0.5em solid var(--clr-dark);
+    box-shadow: var(--bs);
+    text-align: center;
+    padding: 2em;
+    margin-top: 0;
+    margin-bottom: 2em;
+    width: 15em;
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
         
 }
 
-.portfolio__item:focus {
+.card:focus {
     position: relative;
     z-index: 2;
 }
 
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
-    transform: scale(1.2);
-    opacity: .5;
+.card:hover,
+.card:focus .card {
+    transform: scale(1.1);
+    opacity: .90;
 }
 
 
