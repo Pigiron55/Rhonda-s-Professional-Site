@@ -563,7 +563,8 @@ footer p {
     .my-services {
         grid-area: my-services;
         margin-top: 2em;
-        width: 60vw;    
+        width: 55vw; 
+        margin-right: 0;   
     }
 
     .services {
