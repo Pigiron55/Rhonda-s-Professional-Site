@@ -446,10 +446,7 @@ header {
     margin-top: 0;
     margin-bottom: 2em;
     width: 15em;
-    transition: 
-        transform 750ms cubic-bezier(.5, 0, .5, 1),
-        opacity 250ms linear;
-        
+          
 }
 
 h4 {
@@ -487,12 +484,6 @@ blockquote p:after {
 .card:focus {
     position: relative;
     z-index: 2;
-}
-
-.card:hover,
-.card:focus .card {
-    transform: scale(.9);
-    opacity: .90;
 }
 
 
