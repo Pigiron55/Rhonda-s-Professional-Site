@@ -536,7 +536,7 @@ footer p {
     padding: 1.5em;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1800px) {
     body {
         display: grid;
         width: min-content;
