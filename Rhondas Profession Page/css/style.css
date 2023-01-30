@@ -105,6 +105,7 @@ h3 { font-size: var(--fs-h3) }
 .section__title {
     font-family: var(--ff-primary);
     margin-bottom: .25em;
+    line-height: 1.5em;
 }
 
 .section__title--intro {
@@ -434,6 +435,11 @@ header {
     text-align: center;    
 }
 
+.section__title {
+    color: var(--clr-light);
+    margin-bottom: 2em;
+}
+
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -517,8 +523,9 @@ blockquote p:after {
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
-
 }
+
+
 
 footer p {
     font-size: 1.5em;
