@@ -536,7 +536,7 @@ footer p {
     padding: 1.5em;
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1600px) {
     body {
         display: grid;
         width: min-content;
@@ -544,7 +544,8 @@ footer p {
         grid-column-gap: 1em;
         grid-template-areas: 
             "header header"
-            "intro my-services"
+            "intro intro"
+            "about-me my-services"
             "about-me my-services"
             "my-reviews my-reviews"
             "footer footer";
@@ -556,25 +557,19 @@ footer p {
     }
 
     .intro {
-        grid-area: intro;
-        width: 50%;
-        margin-left: 0;
-        
+        grid-area: intro;      
     }
 
     .my-services {
         grid-area: my-services;
         margin-top: 2em;
-        width: 50vw;
-        
+        width: 60vw;    
     }
 
     .services {
         display: flex;
-        
         margin-left: auto;
-        margin-right: auto;
-        
+        margin-right: auto;    
     }
     
     .service + .service {
@@ -583,7 +578,7 @@ footer p {
 
     .about-me {
         grid-area: about-me;
-        
+        width: 40vw;
         margin-left: 0;
     }
 
