@@ -435,7 +435,7 @@ header {
     text-align: center;    
 }
 
-.section__title {
+.section__title--work {
     color: var(--clr-light);
     margin-bottom: 2em;
 }
