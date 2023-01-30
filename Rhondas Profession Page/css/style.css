@@ -33,6 +33,8 @@
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
     }
+
+
 }
 
 /* General styles */
@@ -406,18 +408,18 @@ header {
 
 /* My reviews */
 
-.my-work {
+.my-reviews {
     background-color: var(--clr-dark);
     color: var(--clr-dark);
     text-align: center;    
 }
 
-.section__title--work {
+.section__title--reviews {
     color: var(--clr-light);
     margin-bottom: 2em;
 }
 
-.portfolio {
+.reviews {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 2em;
@@ -534,31 +536,64 @@ footer p {
     padding: 1.5em;
 }
 
+@media (min-width: 1500px) {
+    body {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            "header header"
+            "intro my-services"
+            "about-me my-services"
+            "my-reviews my-reviews"
+            "footer footer";
+        grid-template-columns: min-content max-content;
+    }
 
-/* Individual portfolio item styles */
+    .header {
+        grid-area: header;
+    }
 
-.portfolio-item-individual {
-    padding: 0 2em 2em;
-    max-width: 1000px;
-    margin: 2em auto;
-    text-align: center;
+    .intro {
+        grid-area: intro;
+        width: 50%;
+        margin-left: 0;
+        
+    }
+
+    .my-services {
+        grid-area: my-services;
+        margin-top: 2em;
+        width: 50vw;
+        
+    }
+
+    .services {
+        display: flex;
+        
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    
+    .service + .service {
+        margin-left: 2em;
+    }
+
+    .about-me {
+        grid-area: about-me;
+        
+        margin-left: 0;
+    }
+
+    .my-reviews {
+        grid-area: my-reviews
+        
+    }
+
+    .footer {
+        grid-area: footer
+    }
 }
-
-.portfolio-item-individual p {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-}
-
-.portfolio-item-individual img {
-    margin-bottom: 2em;
-    margin-top: 1em;
-
-}
-
-.long {
-    margin-left: auto;
-    margin-right: auto;
-} 
 
