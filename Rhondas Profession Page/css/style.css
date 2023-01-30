@@ -268,16 +268,6 @@ header {
 
 .intro__img {
     box-shadow: var(--bs);
-    -webkit-mask-image: linear-gradient(
-        rgb(0 0 0 / 1) 85%,
-        rgb(0 0 0 / 0.5) ,
-        rgb(0 0 0 / 0)
-    );
-    mask-image: linear-gradient( 
-        rgb(0 0 0 / 1) 85%,
-        rgb(0 0 0 / 0.5) ,
-        rgb(0 0 0 / 0)
-    );
     border-radius:50%;
 }
 
@@ -383,16 +373,7 @@ header {
 
 .about-me__img {
     box-shadow: var(--bs);
-    -webkit-mask-image: linear-gradient(
-        rgb(0 0 0 / 0) ,
-        rgb(0 0 0 / 0.5) ,
-        rgb(0 0 0 / 1) 20%
-    );
-    mask-image: linear-gradient( 
-        rgb(0 0 0 / 0) ,
-        rgb(0 0 0 / 0.5) ,
-        rgb(0 0 0 / 1) 20%
-    );
+    
 }
 
 @media (min-width: 600px) {
