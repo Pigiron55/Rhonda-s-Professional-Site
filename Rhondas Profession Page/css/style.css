@@ -7,8 +7,8 @@
 /* Custom Properties, update these for your own design */
 
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-primary: 'Satisfy', cursive;
+    --ff-secondary: 'Roboto', monospace;
     
     --fw-reg: 300;
     --fw-bold: 900;
@@ -47,7 +47,7 @@ body {
     background: var(--clr-light);
     color: var(--clr-dark);
     margin: 0;
-    font-family: var(--ff-primary);
+    font-family: var(--ff-secondary);
     font-size: var(--fs-body);
     line-height: 1.6;
 }
@@ -103,6 +103,7 @@ h3 { font-size: var(--fs-h3) }
 
 
 .section__title {
+    font-family: var(--ff-primary);
     margin-bottom: .25em;
 }
 
@@ -165,15 +166,16 @@ header {
     height: 50%;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: left;
     margin: 0;
+    margin-left: 1em;
     padding: 0;
 }
 
 .nav__link {
     color: var(--clr-light);
     font-weight: var(--fw-bold);
-    font-size: var(--fs-h2);
+    font-size: var(--fs-h3);
     text-decoration: none;
 }
 
@@ -193,7 +195,7 @@ header {
 }
 
 .nav-open .nav {
-    transform: translateX(0);
+    transform: translateX(50%);
 }
 
 .nav-open .nav-toggle {
@@ -202,10 +204,13 @@ header {
 
 .nav-open .hamburger {
     transform: rotate(.625turn);
+    background: var(--clr-light);
+
 }
 
 .nav-open .hamburger::before {
     transform: rotate(90deg) translateX(-6px);
+    background: var(--clr-light);
 }
 
 .nav-open .hamburger::after {
@@ -241,13 +246,16 @@ header {
 
 @media (min-width: 600px) {
     .nav {
-        background: hsl(0, 0%, 0%, 0.1);
+        background: hsl(0, 0%, 0%, .4);
         backdrop-filter: blur(3rem);
            
     }
     .nav__link {
-        color: var(--clr-dark);
+        color: var(--clr-light);
+        font-size: var(--fs-h2);
     }
+    
+
 }
 
 
@@ -314,12 +322,10 @@ header {
     background-color: var(--clr-dark);
     background-image: url(../img/background1.jpg);
     background-size: cover;
-    
-    
-    
     background-blend-mode: overlay;
     color: var(--clr-light);
     text-align: center;
+    
 }
 
 .section__title--services {
@@ -420,7 +426,7 @@ header {
     }
 }
 
-/* My Work */
+/* My reviews */
 
 .my-work {
     background-color: var(--clr-dark);
@@ -437,9 +443,10 @@ header {
 
 .card {
     background: var(--clr-light);
-    padding: 2em;
+    padding: 1em;
     margin-bottom: 2em;
-    max-height: 300px
+    max-height: 450px;
+    max-width: 400px;
        
 }
 
@@ -448,7 +455,7 @@ header {
     border-left: 0.5em solid var(--clr-dark);
     box-shadow: var(--bs);
     text-align: center;
-    padding: 2em;
+    padding: 1em;
     margin-top: 0;
     margin-bottom: 2em;
     width: 15em;
@@ -458,6 +465,38 @@ header {
         
 }
 
+h4 {
+    text-align: right;
+    margin-top: 3em;
+
+}
+
+blockquote {
+    border:none;
+    font-family: var(--ff-primary);
+    margin-bottom:-2em;
+}
+    
+blockquote p {
+    font-size:1.4em;
+}
+    
+blockquote p:before { 
+    content: open-quote;
+    font-weight: bold;
+    font-size:30px;
+    color: var(--clr-dark);
+    margin-right: .3em;
+} 
+
+blockquote p:after { 
+    content: close-quote;
+    font-weight: bold;
+    font-size:30px;
+    color: var(--clr-dark);
+    margin-left: .3em
+}
+
 .card:focus {
     position: relative;
     z-index: 2;
@@ -465,7 +504,7 @@ header {
 
 .card:hover,
 .card:focus .card {
-    transform: scale(1.1);
+    transform: scale(.9);
     opacity: .90;
 }
 
